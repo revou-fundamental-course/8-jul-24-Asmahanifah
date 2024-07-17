@@ -1,0 +1,70 @@
+/* Ini css */
+
+.main-title {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-content {
+    flex: 1;
+    padding: 12px
+}
+
+.input-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+form {
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.button {
+    height: 20px;
+    border-radius: 2px;
+}
+
+.submit {
+    background-color: skyblue;
+    border: 1px solid deepskyblue;
+}
+
+.reset {
+    background-color: white;
+    border: 1px solid deepskyblue;
+}
+
+.result-section {
+    text-align: center;
+    background-color: aliceblue;
+    border-radius: 3px;
+    padding: 12px;
+}
+
+input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+.indikasi-penyakit {
+    background-color: aliceblue;
+    text-align: center;
+    list-style: none;
+}
+
+.header-indikasipenyakit {
+    font-weight: bold;
+}
+  
+ 
