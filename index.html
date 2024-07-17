@@ -22,29 +22,30 @@
 
         <!-- form -->
         <section>
-            <form>
-                <div>
-                    <div class="input-title">Jenis Kelamin</div>
-                    <input type="radio" id="selection-man"><label for="selection-man">Laki-Laki</label>
-                    <input type="radio" id="selection-woman"><label for="selection-woman">Perempuan</label>
-                </div>
-                <div>
-                    <label for="input berat badan">Berat Badan (kg)</label>
-                    <input type="number" id="input berat badan">
-                </div>
-                <div>
-                    <label for="input usia ">Usia (tahun)</label>
-                    <input type="number" id="input usia"> 
-                </div>
-                <div>
-                    <label for="input tinggi badan">Tinggi badan (cm)</label>
-                    <input type="number" id="input tinggi badan badan">
-                </div>
-                <div>
-                    <button class="button submit">Hitung BMI</button>
-                    <button class="button reset">Reset</button>
-                </div>
-            </form>
+                <form>
+                    <div>
+                      <div class="input-title">Jenis Kelamin</div>
+                      <input type="radio" id="selection-man"><label for="selection-man">Laki-Laki</label>
+                      <input type="radio" id="selection-woman"><label for="selection-woman">Perempuan</label>
+                    <div>
+                        <label for="usia">Usia</label>
+                        <input type="number" id="usia">
+                    </div>
+                    </div>
+                    <div class="input-container">
+                      <label for="height">Height:</label>
+                      <input type="number" id="height">
+                    </div>
+                    <div class="input-container">
+                      <label for="weight">Weight:</label>
+                      <input type="number" id="weight">
+                    </div>
+                    <div>
+                      <button class="button submit" type="button" onclick="calculateBmi()">Hitung BMI</button>
+                      <button type="button" onclick="reload()">Reset</button>
+                    </div>
+                </form>
+              
 
         <!--form article-->
             <section>
@@ -71,7 +72,7 @@
 
         
         <!-- Right Section -->
-        <section class="main-content">
+        <section class="right-section">
                <!--Result Article-->
        <article>
             <header>
@@ -80,43 +81,34 @@
              
             <!--Result Section-->
             <section class="result-section">
-                <p>Hasil Adalah</p>
-
-                <h2>24.7</h2>
-
-                <p>Anda Memilki Berat Badan Berlebih</p>
+                <div id="result"></div>
+                <div id="bmi-output"></div>
+                <div id="message"></div>
             </section>
             
             <!--Result Article-->
             <article>
-                <p>
-                    Hasil BMI diantar 23 dan 25
-                </p>
-                <div></div>
-                <p>
-                    Anda berada dalam kategori overweight atau berat badan berlebih.
-                </p>
-                <p>
-                    Cara terbaik untuk menurunkan berat badan adalah mengatur kalor makanan yang dikonsumsi dan berolahraga.
-                </p>
-                <p>
-                    Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.
-                </p>
+                <p id="penjelasan-hasil"></p>
+                <a href="https://ilmugiziku.com/2021/11/30/berbagai-aplikasi-gizi-mahasiswa-gizi-wajib-tahu/"><button>Konsulatasi Ahli Gizi Via Aplikasi</button></a>
+                <a href="https://nutric.id/"><button>Konsultasi Ahli Gizi Via Online</button></a>
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
             </article>
         
             <!--General Information-->
             <section class="indikasi-penyakit">
                 <p class="header-indikasipenyakit">Beberapa penyakit yang berasal dari kegemukan</p>
-                <ol>
+                <ul>
                     <li>Diabetes</li>
                     <li>Hipertensi</li>
                     <li>Sakit Jantung</li>
                     <li>Osteoarthritis</li>
-                </ol>
+                </ul> 
             </section>
         </article>
          </section>      
     </main>
+
+    <script src="js/scripts.js"></script>
 </body>
 </html>
 

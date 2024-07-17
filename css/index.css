@@ -4,15 +4,12 @@
     text-align: center;
 }
 
-main {
-    display: flex;
-    justify-content: space-around;
-}
-
 .main-content {
     flex: 1;
     padding: 12px
 }
+
+
 
 .input-title {
     font-size: 16px;
@@ -28,11 +25,6 @@ form {
 .button {
     height: 20px;
     border-radius: 2px;
-}
-
-.submit {
-    background-color: skyblue;
-    border: 1px solid deepskyblue;
 }
 
 .reset {
