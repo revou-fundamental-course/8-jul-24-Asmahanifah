@@ -22,30 +22,21 @@
 
         <!-- form -->
         <section>
-                <form>
+                <form class="form-input" id="bmi-form">
                     <div>
                       <div class="input-title">Jenis Kelamin</div>
-                      <input type="radio" id="selection-man"><label for="selection-man">Laki-Laki</label>
-                      <input type="radio" id="selection-woman"><label for="selection-woman">Perempuan</label>
+                      <input type="radio" name="jeniskelamin" id="selection-man" value="Laki-Laki"><label for="selection-man">Laki-Laki</label>
+                      <input type="radio" name="jeniskelamin" id="selection-woman" value="perempuan"><label for="selection-woman">Perempuan</label>
                     <div>
-                        <label for="usia">Usia</label>
-                        <input type="number" id="usia">
-                    </div>
-                    </div>
-                    <div class="input-container">
-                      <label for="height">Height:</label>
-                      <input type="number" id="height">
-                    </div>
-                    <div class="input-container">
-                      <label for="weight">Weight:</label>
-                      <input type="number" id="weight">
-                    </div>
                     <div>
-                      <button class="button submit" type="button" onclick="calculateBmi()">Hitung BMI</button>
-                      <button type="button" onclick="reload()">Reset</button>
+                        <input type="number" id="input-usia" placeholder="Masukkan usia Anda">
+                        <input type="number" id="input-tinggi-badan" placeholder="Masukkan tinggi badan Anda">
+                        <input type="number" id="input-berat-badan" placeholder="Masukkan berat badan Anda">
+                        <button class="button submit" type="submit" id="calculate-bmi">Hitung BMI</button>
+                        <button type="reset" id="reset-button">Reset</button>
                     </div>
                 </form>
-              
+        </section>      
 
         <!--form article-->
             <section>
@@ -61,18 +52,16 @@
                     <p>
                         Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasrkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter
                     </p>
-                    <div></div>
                     <p>
                         Kalkutor akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Masa Tubuh atau BMI akan dihitung dengan membagi berat badan Anda dengan kuadrat tinggi badan Anda atau BMI=Kg/m²
                     </p>
                 </article>
             </section>
-        </section> 
         </section>
 
         
         <!-- Right Section -->
-        <section class="right-section">
+        <section class="main-content">
                <!--Result Article-->
        <article>
             <header>
@@ -81,33 +70,47 @@
              
             <!--Result Section-->
             <section class="result-section">
-                <div id="result"></div>
-                <div id="bmi-output"></div>
-                <div id="message"></div>
+                <p>Hasil BMI Anda adalah</p>
+                <h2 id="bmi-output">0</h2>
+                <p id="kategori"></p>
             </section>
+
+            
             
             <!--Result Article-->
-            <article>
-                <p id="penjelasan-hasil"></p>
-                <a href="https://ilmugiziku.com/2021/11/30/berbagai-aplikasi-gizi-mahasiswa-gizi-wajib-tahu/"><button>Konsulatasi Ahli Gizi Via Aplikasi</button></a>
-                <a href="https://nutric.id/"><button>Konsultasi Ahli Gizi Via Online</button></a>
-                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
-            </article>
-        
-            <!--General Information-->
-            <section class="indikasi-penyakit">
-                <p class="header-indikasipenyakit">Beberapa penyakit yang berasal dari kegemukan</p>
-                <ul>
-                    <li>Diabetes</li>
-                    <li>Hipertensi</li>
-                    <li>Sakit Jantung</li>
-                    <li>Osteoarthritis</li>
-                </ul> 
+            <section>
+                <article id="penjelasan-kategori-underweight" style = "display: none">
+                    <p>Hasil BMI berada kurang dari 18.5</p>
+                    <p>Cara terbaik untuk meningkatkan berat badan Anda adalah dengan mengonsumsi makanan yang mengandung karbodidrat dan lemak serta rutin berolahraga</p>
+                </article>
+                <article id="penjelasan-kategori-normal" style = "display: none">
+                    <p>Hasil BMI berada diantara 18.5 sampai 24.9 </p>
+                    <p>Tetap pertahankan berat badan Anda dan jaga berat badan Anda dengan mengatur keseimbangan antara pola makan dan aktivitas fisik Anda.</p>
+                </article>
+                <article id="penjelasan-kategori-overweight" style = "display: none">
+                    <p>Hasil BMI berada diantara 25 sampai 29.9 </p>
+                    <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan berolahraga.</p>
+                    <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal.</p>
+                </article>
+                <article id="penjelasan-kategori-obesitas" style = "display: none">
+                    <p>Hasil BMI lebih dari 30 </p>
+                    <p>Obesitas cenderung mengakibatkan penyakit-penyakit seperti jantung, hipertensi,</p>
+                    <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk  mengatur pola makan dan berolahraga.</p>
+                </article>
             </section>
+            
+            <!--General Information-->
+            <article>
+                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+                <a href="https://ilmugiziku.com/2021/11/30/berbagai-aplikasi-gizi-mahasiswa-gizi-wajib-tahu/"><button class="konsultasi">Konsulatasi Ahli Gizi Via Aplikasi</button></a>
+                <a href="https://nutric.id/"><button class="konsultasi">Konsultasi Ahli Gizi Via Online</button></a>
+            </article>
+            
         </article>
          </section>      
     </main>
 
+    <!-- javascript -->
     <script src="js/scripts.js"></script>
 </body>
 </html>
