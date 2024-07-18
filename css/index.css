@@ -1,6 +1,6 @@
 /* warna latar belakang halaman */
 html{
-    background-color: #ffecef;
+    background-color: #fbf6f7;;
 }
 
 /* dispaly main content */
@@ -58,7 +58,7 @@ button {
     width: 90%;
 }
 
-/* style bagian hasil BMI */
+/* style hasil BMI */
 .result-section {
     text-align: center;
     background-color: #d39595;
@@ -76,5 +76,21 @@ input[type=number], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+/* style tabel bmi */
+table {
+    text-align: center;
+    background-color: #e6bcbc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 70%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 8px 20px;
+}
+
   
  

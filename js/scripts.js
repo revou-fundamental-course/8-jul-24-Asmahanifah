@@ -32,7 +32,7 @@ function cacluateBmi(event) {
 
     // Klasifikasi hasil bmi dan penjelasannya
     if (bmi < 18.5) {
-        document.getElementById('kategori').innerHTML = "Kekurangan Berat Badan";
+        document.getElementById('kategori').innerHTML = "Underweight";
         penjelasanUnderweight.style.display = 'block'
         penjelasanNormal.style.display = 'none'
         penjelasanOverweight.style.display = 'none'
@@ -44,13 +44,13 @@ function cacluateBmi(event) {
         penjelasanOverweight.style.display = 'none'
         penjelasanObesitas.style.display = 'none'
     } else if (bmi < 30) {
-        document.getElementById('kategori').innerHTML = "Kelebihan Berat Badan"
+        document.getElementById('kategori').innerHTML = "Overweight"
         penjelasanUnderweight.style.display = 'none'
         penjelasanNormal.style.display = 'none'
         penjelasanOverweight.style.display = 'block'
         penjelasanObesitas.style.display = 'none'
     } else {
-        document.getElementById('kategori').innerHTML = "Kegemukan (obessitas)"
+        document.getElementById('kategori').innerHTML = "Obesity"
         penjelasanUnderweight.style.display = 'none'
         penjelasanNormal.style.display = 'none'
         penjelasanOverweight.style.display = 'none'
